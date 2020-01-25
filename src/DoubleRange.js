@@ -53,7 +53,7 @@ export default class DoubleRange {
     this.init();
   }
 
-  reset() {
+  reset () {
     this.control.coords = this.control.elem.getBoundingClientRect();
     this.thumbs.width = this.thumbs.from.elem.offsetWidth;
     this.thumbs.maxLeft = this.control.elem.offsetWidth - this.thumbs.width;
