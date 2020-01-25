@@ -1,0 +1,44 @@
+{
+  "name": "double-range",
+  "homepage": "https://yoksel.github.io/double-range/",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "npm run js:lint && npm run css:lint",
+    "build": "webpack --config prod.config.js",
+    "start": "webpack-dev-server --open",
+    "deploy": "npm run build && gh-pages -d dist",
+    "js:lint": "eslint src",
+    "js:fix": "eslint src --fix",
+    "css:lint": "stylelint src/**/*.scss",
+    "css:fix": "stylelint src/**/*.scss --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "css-loader": "^3.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.2",
+    "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
