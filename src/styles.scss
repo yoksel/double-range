@@ -19,6 +19,21 @@ BODY {
   color: #000;
 }
 
+A {
+  color: #2A7AE2;
+  text-decoration: underline;
+  transition: all .25s;
+}
+
+A:visited {
+  color: #1756A9;
+}
+
+A:hover {
+  color: #6DA4EB;
+  text-decoration: none;
+}
+
 H1,
 H2 {
   font-weight: normal;
