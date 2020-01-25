@@ -150,7 +150,7 @@ export default class DoubleRange {
     });
   }
 
-  pointerDown () {
+  pointerDown (event) {
     const key = event.target.dataset.key;
     if (!key) {
       return;

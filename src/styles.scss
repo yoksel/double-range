@@ -19,10 +19,23 @@ BODY {
   color: #000;
 }
 
+H1,
+H2 {
+  font-weight: normal;
+}
+
 H1 {
   margin: 0;
-  margin-bottom: 2em;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #DDD;
+  font-size: 3rem;
   text-align: center;
+}
+
+H2 {
+  margin: 0;
+  margin-bottom: 2rem;
 }
 
 BUTTON,
@@ -47,7 +60,7 @@ SELECT {
 .form__footer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .form__contol {
@@ -59,7 +72,7 @@ SELECT {
   cursor: pointer;
 
   & + & {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   &--reset {
@@ -69,11 +82,16 @@ SELECT {
   &:hover {
     opacity: .75;
   }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .25);
+  }
 }
 
 .double-range {
   position: relative;
   height: var(--range-height);
+  user-select: none;
 }
 
 .double-range__line {
