@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+HTML {
+  font-size: 16px;
+}
+
+BODY {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #FFF;
+  font: 1rem/1.4 Trebuchet MS, Verdana, sans-serif;
+  color: #000;
+}
+
+A {
+  color: #2A7AE2;
+  text-decoration: underline;
+  transition: all .25s;
+}
+
+A:visited {
+  color: #1756A9;
+}
+
+A:hover {
+  color: #6DA4EB;
+  text-decoration: none;
+}
+
+H1,
+H2 {
+  font-weight: normal;
+}
+
+H1 {
+  margin: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #DDD;
+  font-size: 3rem;
+  text-align: center;
+}
+
+H2 {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+BUTTON,
+INPUT,
+TEXTAREA,
+SELECT {
+  font: inherit;
+}
+
+.wrapper {
+  min-width: 60vw;
+  max-width: 90vw;
+  margin: 2rem auto;
+}
+
+.form__group {
+  & + & {
+    margin-top: 3rem;
+  }
+}
+
+.form__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.form__contol {
+  padding: .5rem 1rem;
+  border: none;
+  background: #000;
+  border-radius: .25rem;
+  color: #FFF;
+  cursor: pointer;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &--reset {
+    background: crimson;
+  }
+
+  &:hover {
+    opacity: .75;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .25);
+  }
+}
