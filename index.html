@@ -2,14 +2,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Double slider</title>
-  <link rel="stylesheet" href="./styles.css"/>
+  <title>Double range</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<link href="/double-range/styles.css" rel="stylesheet"></head>
 
 <body>
   <div class="wrapper">
-    <h1>Double slider</h1>
+    <h1>Double range</h1>
 
     <section>
       <h2>Live demo</h2>
@@ -18,61 +17,15 @@
 
         <div class="form__group">
           <!-- Double range -->
-          <div class="double-range">
-            <span
-              class="double-range__line"
-            ></span>
-
-            <label class="double-range__label">
-              <span
-                class="
-                  double-range__label-text
-                  double-range__label-text--from"></span>
-              <input
-                class="
-                  double-range__input
-                  double-range__input--from"
-                type="range"
-                min="0"
-                max="100"
-                step="1"
-                value="10"
-                name="doube-range"
-                data-key="from"
-              >
-              <span
-                class="
-                  double-range__thumb
-                  double-range__thumb--from"
-                data-key="from"
-              ></span>
-            </label>
-
-            <label class="double-range__label">
-              <span
-                class="
-                  double-range__label-text
-                  double-range__label-text--to"></span>
-              <input
-                class="
-                  double-range__input
-                  double-range__input--to"
-                type="range"
-                min="0"
-                max="100"
-                step="1"
-                value="90"
-                name="doube-range"
-                data-key="to"
-              >
-              <span
-                class="
-                  double-range__thumb
-                  double-range__thumb--to"
-                data-key="to"
-              ></span>
-            </label>
-          </div>
+          <div
+            data-elem="double-range"
+            data-min="0"
+            data-max="500"
+            data-step="10"
+            data-value-min="25"
+            data-value-max="415"
+            class="my-double-range"
+          ></div>
           <!-- // Double range -->
         </div>
 
@@ -97,7 +50,5 @@
       <p><a href="https://github.com/yoksel/double-range">Project on gihub</a></p>
     </section>
   </div>
-
-  <script src="./bundle.js"></script>
-</body>
+<script type="text/javascript" src="/double-range/bundle.js"></script></body>
 </html>
