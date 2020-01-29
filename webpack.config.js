@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => {
   return {
@@ -29,8 +30,14 @@ module.exports = () => {
     devServer: {
       contentBase: path.join(__dirname, 'dist'),
       compress: true,
-      port: 9000
+      port: 9001
     },
-    plugins: []
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Shop admin page',
+        filename: 'index.html',
+        template: 'src/index-tmpl.html'
+      }),
+    ]
   }
 };

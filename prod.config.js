@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = () => {
   return {
@@ -29,6 +30,11 @@ module.exports = () => {
         // all options are optional
         filename: 'styles.css',
         ignoreOrder: false, // Enable to remove warnings about conflicting order
+      }),
+      new HtmlWebpackPlugin({
+        title: 'Shop admin page',
+        filename: 'index.html',
+        template: 'src/index-tmpl.html'
       }),
     ]
   }

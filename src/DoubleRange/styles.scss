@@ -1,0 +1,64 @@
+.double-range {
+  --range-height: 2rem;
+  --thumb-height: 1.5rem;
+
+  position: relative;
+  height: var(--range-height);
+  user-select: none;
+}
+
+.double-range__line {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: .45rem;
+  background: #DDD;
+  border-radius: .25rem;
+  pointer-events: none;
+}
+
+.double-range__input {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.double-range__label-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 100%;
+  width: var(--thumb-height);
+  color: #777;
+  font-size: .8em;
+}
+
+.double-range__thumb {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: var(--thumb-height);
+  height: var(--thumb-height);
+  background: steelblue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.double-range__input:focus + .double-range__thumb {
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, .25);
+}
+
+.double-range__thumb--from {
+  background: linear-gradient(teal, turquoise);
+}
+
+.double-range__thumb--to {
+  background: linear-gradient(crimson, gold);
+}

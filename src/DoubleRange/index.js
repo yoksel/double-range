@@ -1,7 +1,14 @@
+import { fillTemplate, createElement } from './helpers.js';
+import tmpl from './template.js';
+
+import './styles.scss';
+
 export default class DoubleRange {
-  constructor (elem) {
+  constructor (elemPlaceholder) {
+    this.render(elemPlaceholder);
+
     this.control = {
-      elem
+      elem: this.elem
     };
 
     // Use form to check reset
@@ -53,6 +60,30 @@ export default class DoubleRange {
     this.init();
   }
 
+  render (elemPlaceholder) {
+    const placeHolderClass = elemPlaceholder.className;
+
+    const data = {
+      class: placeHolderClass,
+      ...elemPlaceholder.dataset
+    };
+
+    const markup = fillTemplate({
+      tmpl,
+      data
+    });
+
+    this.elem = createElement(markup);
+    elemPlaceholder.replaceWith(this.elem);
+  }
+
+  init () {
+    this.reset();
+
+    this.disableDefaultDragstart();
+    this.addEvents();
+  }
+
   reset () {
     this.control.coords = this.control.elem.getBoundingClientRect();
     this.thumbs.width = this.thumbs.from.elem.offsetWidth;
@@ -62,13 +93,6 @@ export default class DoubleRange {
     this.coords.max = this.thumbs.maxLeft;
 
     this.setThumbPosition();
-  }
-
-  init () {
-    this.reset();
-
-    this.disableDefaultDragstart();
-    this.addEvents();
   }
 
   disableDefaultDragstart () {
@@ -113,7 +137,6 @@ export default class DoubleRange {
       }
 
       // Set thumb position
-
       const value = reset ? input.defaultValue : input.value;
 
       let left = value / this.maxValue * (elemWidth - this.thumbs.width);
