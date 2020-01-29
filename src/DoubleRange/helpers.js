@@ -27,4 +27,3 @@ export const createElement = supportsTemplate
     };
 
 export default createElement;
-

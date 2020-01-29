@@ -1,4 +1,4 @@
-import {fillTemplate, createElement} from './helpers.js';
+import { fillTemplate, createElement } from './helpers.js';
 import tmpl from './template.js';
 
 import './styles.scss';
@@ -61,13 +61,6 @@ export default class DoubleRange {
   }
 
   render (elemPlaceholder) {
-    const {
-      min,
-      max,
-      step,
-      valueMin,
-      valueMax
-    } = elemPlaceholder.dataset;
     const placeHolderClass = elemPlaceholder.className;
 
     const data = {
@@ -101,7 +94,6 @@ export default class DoubleRange {
 
     this.setThumbPosition();
   }
-
 
   disableDefaultDragstart () {
     const list = Object.values(this.thumbsList);
