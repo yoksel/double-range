@@ -1,6 +1,10 @@
-import DoubleRange from './DoubleRange.js';
-import './styles.scss';
+import DoubleRange from './DoubleRange/index.js';
 
-const doubleRangeElem = document.querySelector('.double-range');
-/* eslint-disable-next-line */
-new DoubleRange(doubleRangeElem);
+import './base.scss';
+
+const doubleRangeElem = document.querySelector('[data-elem="double-range"]');
+
+if(doubleRangeElem) {
+  /* eslint-disable-next-line */
+  new DoubleRange(doubleRangeElem);
+}
