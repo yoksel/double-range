@@ -18,7 +18,7 @@ export default `
       max="{max}"
       step="{step}"
       value="{valueMin}"
-      name="doube-range"
+      name="{nameMin}"
       data-key="from"
     >
     <span
@@ -43,7 +43,7 @@ export default `
       max="{max}"
       step="{step}"
       value="{valueMax}"
-      name="doube-range"
+      name="{nameMax}"
       data-key="to"
     >
     <span
